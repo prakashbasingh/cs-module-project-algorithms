@@ -4,8 +4,17 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-
-    pass
+    # find the single number in the array/list
+    # needing a data structure to keep track how many times a number appears
+    # need to add value using loops
+    # need to find the number which appears only once
+    number = set()
+    for x in arr:
+        if x in number:
+            number.remove(x)
+        else:
+            number.add(x)
+    return number.pop()
 
 
 if __name__ == '__main__':
