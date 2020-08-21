@@ -4,8 +4,21 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
-
-    pass
+    # first create an new empty array/list
+    new_array = []
+    # iterating through array need to multiply all index expect the current index
+    for i in range(len(arr)):
+        # need to keep track of product
+        product = 1
+        for excluded_idx in range(len(arr)):
+        # if current index is not equal to excluded-idx
+            if i != excluded_idx:
+            #multiply values of all other index except the excluded index
+                product *= arr[excluded_idx] # or product = product * arr[i]
+    # need to append product in the new array
+        new_array.append(product)
+    # then return the  new array with products of all numbers except the current index number
+    return new_array
 
 
 if __name__ == '__main__':
